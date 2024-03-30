@@ -262,6 +262,7 @@ bool calculator_backend::end_of_line(parse_status _s) {
     //     _parse_status = parse_status::eof;
     //     return true;
     // }
+    return true;
 }
 bool calculator_backend::compile_word(std::string& _s) const {
     // supposed that %_s meets grammer rule

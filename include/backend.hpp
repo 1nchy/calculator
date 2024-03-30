@@ -5,6 +5,9 @@
 
 #include <map>
 #include <unordered_map>
+
+#include "arithmetic_tree.hpp"
+
 #include "trie_tree/trie_tree.hpp"
 
 namespace asp {
