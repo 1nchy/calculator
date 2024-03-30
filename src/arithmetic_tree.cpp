@@ -69,12 +69,14 @@ void arithmetic_tree::append_tree(self& _tr) {
     _tr._head._subtree = true;
 }
 void arithmetic_tree::clear() {
+    if (_head._subtree) return;
     std::function<void(node* const)> dfs = [&](node* const _p) {
         if (_p == nullptr) return;
         dfs(_p->_left); dfs(_p->_right);
         delete _p;
     };
     dfs(_head._root);
+    _head._root = nullptr;
 }
 
 
