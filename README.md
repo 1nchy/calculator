@@ -1,5 +1,7 @@
 # A NAIVE CALCULATOR
 
+尚未完成 unfinished
+
 ## 简介
 
 一个稚嫩的 calculator 实现，前端实现了终端界面的字符串编辑，后端实现了命令的解析与执行，任务的调度，历史记录管理等功能。支持管道链接、前后台任务调度、tab 补全/建议等功能。
@@ -19,7 +21,7 @@ $ ./calculator
 
 ### calculator 提示信息
 
-~~~shell
+~~~txt
 ~~~
 
 ### calculator 功能展示
@@ -51,7 +53,7 @@ calculator
     └── trie_tree               # 字典树
 ~~~
 
-shell 在实现中被划分为前后端两部分，关于[前端](doc/frontend.md)与[后端](doc/backend.md)的实现细节，可以在文档中翻阅。
+calculator 在实现中被划分为前后端两部分，关于[前端](doc/frontend.md)与[后端](doc/backend.md)的实现细节，可以在文档中翻阅。
 
 我把较独立的功能都放到了 `third` 文件夹内，以静态链接库的形式提供使用。新增独立功能时，需要在项目根目录下 `makefile` 的 `THIRD_LIB_NAME` 变量后追加独立功能文件夹名（同时也是预期生成的静态链接库的名字）。文件夹内，除了独立功能的源代码，同样需要定义一个 makefile，用以编译生成静态链接库，并放置在 `third/lib` 目录下。
 
